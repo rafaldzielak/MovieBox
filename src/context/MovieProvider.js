@@ -9,6 +9,7 @@ const MovieProvider = ({ children }) => {
     moviesDetails: [],
     loading: false,
     error: "",
+    favourites: [],
   });
 
   const setError = useCallback((error) => {

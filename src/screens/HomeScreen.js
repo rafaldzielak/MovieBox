@@ -6,8 +6,9 @@ import { H1 } from "../elements/SearchInput";
 const HomeScreen = () => {
   return (
     <Background>
+      <H1>MovieBox.</H1>
       <H1>Find Your Next Movie!</H1>
-      <MovieSearchComponent top={"30vh"} />
+      <MovieSearchComponent top={"25vh"} />
     </Background>
   );
 };

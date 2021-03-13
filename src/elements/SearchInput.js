@@ -27,9 +27,13 @@ export default styled.form`
 
 export const H1 = styled.h1`
   position: relative;
-  top: 20vh;
+  top: 15vh;
   color: #555;
   font-size: 4rem;
+  margin-bottom: 1rem;
+  @media (max-width: 600px) {
+    font-size: 3rem;
+  }
 `;
 
 export const Input = styled.input`

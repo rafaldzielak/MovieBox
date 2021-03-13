@@ -2,13 +2,10 @@ import "./App.css";
 
 import { ThemeProvider } from "styled-components";
 
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import HomeScreen from "./screens/HomeScreen";
-import Navbar, { Title } from "./elements/Navbar";
-import { MdMovie } from "react-icons/md";
-
+import MovieScreen from "./screens/MovieScreen";
 import Container from "./elements/Container";
-
 import MovieProvider from "./context/MovieProvider";
 
 const theme = {
@@ -23,14 +20,9 @@ function App() {
         <div className='App'>
           <MovieProvider>
             <Router>
-              <Navbar>
-                <Link to='/' style={{ textDecoration: "none" }}>
-                  <Title>
-                    <MdMovie style={{ verticalAlign: "middle" }} /> MovieBox
-                  </Title>
-                </Link>
-              </Navbar>
               <Route exact path='/' component={HomeScreen}></Route>
+              <Route exact path='/search/:keyword' component={MovieScreen}></Route>
+              <Route exact path='/search/:keyword/page/:page' component={MovieScreen}></Route>
             </Router>
           </MovieProvider>
         </div>
